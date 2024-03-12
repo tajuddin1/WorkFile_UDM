@@ -389,11 +389,15 @@ label.filterBtn.active {
 .card-bottom span {
     font-weight: 300;
     color: var(--gray-ca);
+    -webkit-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
     transition: .5s ease-in;
 }
 
 .card-wrapper{
     border-bottom: 2px solid var(--gray-ca);
+    -webkit-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
     transition: .5s ease-in;
 }
 
@@ -406,7 +410,9 @@ label.filterBtn.active {
 }
 
 .card-wrapper:hover img.product-thumb{
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .bg-image-worldMap{
@@ -440,9 +446,14 @@ footer{
     background: var(--color-2);
 }
 .service-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     row-gap: 40px;
 }
 .service-card {
@@ -450,6 +461,8 @@ footer{
     width: 100%;
     padding: 24px 32px;
     border-radius: 4px;
+    -webkit-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
     transition: 0.3s ease-in;
 }
 
@@ -462,14 +475,17 @@ footer{
 }
 
 img.brand-logo{
-    filter: grayscale(100%);
-    filter: contrast(10%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
     max-width: 150px;
     margin: auto;
+    -webkit-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
     transition: .3s ease-in;
 }
 img.brand-logo:hover{
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
 }
 ul.slick-dots {
     bottom: -40px;
@@ -486,6 +502,8 @@ ul.slick-dots {
     position: absolute;
     right: 0;
     top: 0;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
     transition: 0.5s all;
     
 }
@@ -501,7 +519,8 @@ ul.slick-dots {
     z-index: 3;
     border-color: none;
     outline: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .faq-accordion-container .accordion-button{
@@ -512,7 +531,8 @@ ul.slick-dots {
 }
 
 .faq-accordion-container .accordion-button:not(.collapsed){
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     color: var(--color-2);
 }
 
