@@ -15,11 +15,12 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    color: var(--black-3C);
+    
 }
 
 body {
     font-family: "Noto Sans JP", sans-serif;
+    color: var(--black-3C);
 }
 
 audio, canvas, embed, iframe, img, object, svg, video {
@@ -28,10 +29,28 @@ audio, canvas, embed, iframe, img, object, svg, video {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: .025em;
+    /* letter-spacing: .025em; */
     line-height: calc(100% + .5rem);
     line-height: 1.375;
     margin-bottom: 1rem;
+    color: var(--black-3C);
+}
+h1 {
+    font-size: 39px;
+}
+
+h3 {
+    font-size: 33px;
+}
+h4{
+    font-size: 25px;
+}
+h5 {
+    font-size: 20px;
+}
+
+p{
+    color: var(--black-3C);
 }
 
 .container {
@@ -238,7 +257,17 @@ video.hero-content-video {
     right: 0;
     top: 0;
 }
-
+.bg-image-absolute img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
 .hero-content-wrapper {
     max-width: 42rem;
     padding-bottom: 3rem;
@@ -325,6 +354,9 @@ h2.heading-2 {
     text-align: center;
     color: var(--white-ff);
 }
+.btn.button-main-theme:hover {
+    background: #a5006f;
+}
 .filter-checkbox{
     display: none;
 }
@@ -357,25 +389,143 @@ label.filterBtn.active {
 .card-bottom span {
     font-weight: 300;
     color: var(--gray-ca);
-    -webkit-transition: cubic-bezier(.4,0,.2,1);
-    -o-transition: cubic-bezier(.4,0,.2,1);
-    transition: cubic-bezier(.4,0,.2,1);
+    transition: .5s ease-in;
 }
+
 .card-wrapper{
     border-bottom: 2px solid var(--gray-ca);
+    transition: .5s ease-in;
 }
+
 .card-wrapper:hover{
     border-color: var(--color-2);
-    -webkit-transition: .3s cubic-bezier(.4,0,.2,1);
-    -o-transition: .3s cubic-bezier(.4,0,.2,1);
-    transition: .3s cubic-bezier(.4,0,.2,1);
 }
+
 .card-wrapper:hover .card-bottom span{
     color: var(--color-2);
 }
+
+.card-wrapper:hover img.product-thumb{
+    transform: scale(1.1);
+}
+
 .bg-image-worldMap{
     top: 0;
     left: 0;
     bottom: 0;
     padding: 1rem 0;
+}
+
+footer{
+    background-color: var(--gray-f2);
+}
+
+.footer-content p, footer a, footer p {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--black-3C);
+}
+
+.footer-content p a{
+    color: var(--black-3C);
+}
+
+.footer-content p a:hover{
+    text-decoration: underline !important;
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--color-2);
+}
+.service-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+.service-card {
+    max-width: 350px;
+    width: 100%;
+    padding: 24px 32px;
+    border-radius: 4px;
+    transition: 0.3s ease-in;
+}
+
+.service-card:hover {
+    background: #e6e6e64d;
+}
+
+.font-caveat.small{
+    font-size: 100%;
+}
+
+img.brand-logo{
+    filter: grayscale(100%);
+    filter: contrast(10%);
+    max-width: 150px;
+    margin: auto;
+    transition: .3s ease-in;
+}
+img.brand-logo:hover{
+    filter: grayscale(0);
+}
+ul.slick-dots {
+    bottom: -40px;
+}
+.slider-brand .slick-dots li {
+    height: 6px;
+    width: 5rem;
+    background-color: var(--gray-ca);
+}
+.slider-brand .slick-dots  li:before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.5s all;
+    
+}
+.slick-slider .slick-dots li.slick-active:before {
+    background-color: var(--color-2);
+}
+
+.slider-brand .slick-dots li button{
+    display: none;
+}
+
+.faq-accordion-container .accordion-button:focus {
+    z-index: 3;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.faq-accordion-container .accordion-button{
+    color: var(--black-3C);
+    font-size: 25px;
+    font-weight: 300;
+    height: 80px;
+}
+
+.faq-accordion-container .accordion-button:not(.collapsed){
+    box-shadow: none;
+    color: var(--color-2);
+}
+
+.faq-accordion-container li.accordion-item.active{
+    border-color: var(--color-2) !important;
+}
+
+.accordion-button::after {
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../image/icon/accondation-arrow.svg);
 }
