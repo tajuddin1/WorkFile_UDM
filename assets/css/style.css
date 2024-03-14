@@ -27,13 +27,14 @@ audio, canvas, embed, iframe, img, object, svg, video {
     display: block;
     vertical-align: middle;
 }
-
+a , p{
+    color: var(--black-3C);
+}
 h1, h2, h3, h4, h5, h6 {
     /* letter-spacing: .025em; */
     line-height: calc(100% + .5rem);
     line-height: 1.375;
     margin-bottom: 1rem;
-    color: var(--black-3C);
 }
 h1 {
     font-size: 39px;
@@ -129,9 +130,6 @@ p{
             transform: scaleX(1);
 }
 
-.body--content--wrapper{
-    min-height: 190vh;
-}
 section.header--wrapper {
     -webkit-box-shadow: 0 1px 3px 0 rgba(83, 83, 83, 0.1), 0 1px 2px 0 rgba(77, 77, 77, 0.06);
             box-shadow: 0 1px 3px 0 rgba(83, 83, 83, 0.1), 0 1px 2px 0 rgba(77, 77, 77, 0.06);
@@ -357,6 +355,43 @@ h2.heading-2 {
 .btn.button-main-theme:hover {
     background: #a5006f;
 }
+
+.button-outline-main-theme {
+    display: inline-block;
+    padding: 10px 20px;
+    min-width: 150px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: transparent;
+    border-color: var(--color-2);
+    text-align: center;
+    color: var(--color-2);
+}
+.button-outline-main-theme-sm {
+    font-size: 14px;
+    display: inline-block;
+    padding: 8px 16px;
+    min-width: 130px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: transparent;
+    border-color: var(--color-2);
+    text-align: center;
+    color: var(--color-2);
+}
+.button-outline-main-theme.active, .button-outline-main-theme-sm.active {
+    background-color: var(--color-2);
+    border-color: var(--color-2);
+    color: var(--white-ff);
+}
 .filter-checkbox{
     display: none;
 }
@@ -548,4 +583,189 @@ ul.slick-dots {
 
 .accordion-button:not(.collapsed)::after {
     background-image: url(../image/icon/accondation-arrow.svg);
+}
+
+.contact-form-wrapper .service-card {
+    border-bottom: 4px solid var(--black-3C);
+    max-width: 320px;
+    padding: 15px 0;
+    margin: 0px 25px;
+}
+.contact-form-wrapper .service-card.active {
+    border-color: var(--color-2);
+}
+
+.contact-form-wrapper .service-card:hover {
+    border-color: var(--color-2);
+    background: transparent;
+}
+.form-content {
+    position: relative;
+    display: none;
+    margin: 20px 25px;
+}
+.form-content form {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 80px;
+}
+.form-content.active-form{
+    display: block;
+}
+
+button.close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.form-content form label.label-absolute {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    background: #fff;
+    padding: 0px 10px;
+    font-weight: 300;
+}
+
+.form-group {
+    position: relative;
+    padding: 12px 0 0;
+    margin: 10px 0;
+}
+
+.form-group .form-control, .form-group .form-select{
+    padding: 11px 12px;
+    height: 56px;
+    font-weight: 300;
+}
+
+.form-group .form-control:focus, .form-group .form-select:focus {
+    border-color: var(--color-2);
+    outline: 0;
+    box-shadow: unset;
+}
+.text-x-sm p {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--black-3C);
+    font-weight: 300;
+}
+.theme-hover:hover{
+    color: var(--color-2);
+}
+
+table.header-theme-color th {
+    background: var(--color-2);
+    color: #fff;
+    border: 1px solid var(--color-2);
+    font-weight: 400;
+}
+table.header-theme-color td {
+    font-weight: 300;
+    color: var(--black-3C);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 38px;
+    width: 100%;
+  }
+  .dropdown-button {
+    background: #fff;
+    /* gap: 10px; */
+  }
+  .dropdown-content label {
+    display: block;
+    padding: 8px 16px;
+  }
+  .dropdown-content.show-dropdown {
+    display: block;
+  }
+  
+  .dropdown-button input.form-control {
+    color: var(--black-3C);
+    font-size: 16px;
+  }
+  
+  .dropdown-button input.form-control:focus {
+    color: var(--black-3C);
+    box-shadow: none;
+  }
+  
+  label.form-check-label {
+    font-size: 16px;
+    color: var(--black-3C);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 300;
+  }
+
+  i.filtericon img {
+    transform: rotate(90deg);
+    width: 13px;
+}
+
+i.filtericon {
+    width: 40px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-check-input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 0px;
+}
+.form-check-input:checked {
+    background-color: var(--color-2);
+    border-color: var(--color-2);
+}
+
+@media screen and (max-width:768px) {
+    .responsive > thead th {
+        display: none;
+      }
+    .responsive > tbody td,
+    .responsive > tbody th {
+        display: block;
+        border-bottom: 1px solid #f3f3f3;
+        }
+    .responsive > tbody td:first-child{
+        background-color: var(--color-2);
+        color: #fff;
+        font-weight: 400;
+    }
+
+    [row-header] {
+        position: relative;
+        width: 100%;
+        vertical-align: middle;
+    }
+    [row-header]:before {
+        content: attr(row-header);
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        width: 50%;
+        padding-right:30px;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd)>* {
+        --bs-table-color-type: unset;
+        --bs-table-bg-type: unset;
+    }
+    h5.responsive{
+        display: block !important;
+    }
 }

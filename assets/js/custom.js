@@ -12,13 +12,16 @@
 
 // Sticky Nav
 
+var headerTop = document.querySelector('header');
 var header = document.querySelector('.main-header');
 
 window.addEventListener('scroll', function() {
     if (window.pageYOffset >= 104) {
         header.classList.add('sticky');
+        headerTop.classList.add('pb-5');
     } else {
         header.classList.remove('sticky');
+        headerTop.classList.remove('pb-5');
     }
 });
 
