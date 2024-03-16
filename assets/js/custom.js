@@ -1,14 +1,28 @@
 // Mobile Menu 
+function myFunction(x) {
+    x.classList.toggle("change");
+    var navigation = document.querySelector(".navigation-mobile");
+    navigation.classList.toggle("active");
+}
 
-// var navIcon = document.getElementById("navIcon");
-// var leftmenu =document.getElementById("leftMenu");
+document.addEventListener('DOMContentLoaded', function() {
+    var toggleBtns = document.querySelectorAll('.sub-menu-toggle');
+    var goBackBtns = document.querySelectorAll('.go-back');
 
+    toggleBtns.forEach(function(toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            var subMenuWrapper = this.nextElementSibling;
+            subMenuWrapper.classList.toggle('active');
+        });
+    });
 
-// navIcon.addEventListener('click' , function(){
-//     navIcon.classList.toggle('active');
-//     leftmenu.classList.toggle('fitMenu');
-// });
-
+    goBackBtns.forEach(function(goBackBtn) {
+        goBackBtn.addEventListener('click', function() {
+            var subMenuWrapper = this.closest('.sub-menu-wrapper');
+            subMenuWrapper.classList.remove('active');
+        });
+    });
+});
 
 // Sticky Nav
 
@@ -26,37 +40,29 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Save the default tab content
+// Desktop Menu
+
 var defaultTabContent = $('.menu-content').html();
 
-// Save the default content of each tab
 var defaultTabContents = {};
 $('.tab-pane').each(function() {
     var tabId = $(this).attr('id');
     defaultTabContents[tabId] = $(this).html();
 });
 
-// Reset tab content to default when mouse leaves mega-menu
 $('.mega-menu').mouseleave(function(){
-    // Remove "active" class from all tab links
     $('.manu-item-content .nav-link').removeClass('active');
     $('.menu-content .tab-pane').removeClass('active');
-    // Set all tabs to their default content
     $('.tab-pane').each(function() {
     var tabId = $(this).attr('id');
     $(this).html(defaultTabContents[tabId]);
     });
 });
 
-// Handle tab click event
 $('.manu-item-content .nav-link').on('click', function(){
-    // Remove "active" class from all other tabs
     $('.manu-item-content .nav-link').removeClass('active');
-    // Add "active" class to the clicked tab
     $(this).addClass('active');
-    // Get the ID of the clicked tab
     var tabId = $(this).attr('data-bs-target').replace('#', '');
-    // Set the content of other tabs to their default state
     $('.tab-pane').each(function() {
     var currentTabId = $(this).attr('id');
     if (currentTabId !== tabId) {

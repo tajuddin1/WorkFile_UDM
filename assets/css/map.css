@@ -1,0 +1,39 @@
+.gm-style-iw-t {
+    display: none !important;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+.map-container{
+    width: 60%;
+    height: 100%;
+}
+.location-info {
+    display: none;
+    padding-right: 75px;
+}
+
+.active {
+    display: block;
+}
+
+.gm-style iframe + div { 
+    border:none!important; 
+}
+
+button.gm-control-active.gm-fullscreen-control, button.gm-svpc, .gmnoprint{
+    display: none;
+}
+
+.form-control.search::placeholder{
+    color: #fff;
+    font-weight: 300;
+}
+
+.form-control.search:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
