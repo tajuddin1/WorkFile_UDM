@@ -986,32 +986,11 @@ i.filtericon {
     }
 }
 @media screen and (max-width:1024px) {
-    .bg-image-worldMap {
-        display: none !important;
-    }
-    .map-overly {
-        background-image: unset;
-        width: 200%;
-        height: 100%;
-        right: -50px;
-        left: -50px;
-        top: 0;
-        z-index: -1;
-        background-color: #868686;
-    }
     .map-content-wrapper.position-relative {
-        height: 100%;
-        padding-bottom: 100px;
-        padding-right: 0;
-        padding-top: 100px;
-        z-index: 2;
-        min-height: 600px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        padding-right: 150px;
+    }
+    .overly-address-wrapper {
+        min-width: unset;
     }
     .contact-form-wrapper .service-card {
         border-bottom: 4px solid var(--black-3C);
@@ -1028,6 +1007,24 @@ i.filtericon {
     }
 }
 @media screen and (max-width:990px) {
+    .bg-image-worldMap {
+        display: none !important;
+    }
+    .map-overly {
+        background-image: unset;
+        width: 200%;
+        height: 100%;
+        right: -50px;
+        left: -50px;
+        top: 0;
+        z-index: -1;
+        background-color: #868686;
+    }
+    .map-content-wrapper.position-relative {
+        padding-bottom: 100px;
+        padding-right: 0;
+        padding-top: 100px;
+    }
     h2.heading-2 {
         font-size: 28px;
     }
@@ -1186,6 +1183,7 @@ i.filtericon {
         padding: 6px 15px;
         min-width: 120px;
         min-height: unset;
+        font-size: 14px;
     }
     .button-outline-main-theme-sm {
         padding: 6px 15px;

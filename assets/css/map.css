@@ -27,6 +27,26 @@ button.gm-control-active.gm-fullscreen-control, button.gm-svpc, .gmnoprint{
     display: none;
 }
 
+.form-control.search::-webkit-input-placeholder{
+    color: #fff;
+    font-weight: 300;
+}
+
+.form-control.search::-moz-placeholder{
+    color: #fff;
+    font-weight: 300;
+}
+
+.form-control.search:-ms-input-placeholder{
+    color: #fff;
+    font-weight: 300;
+}
+
+.form-control.search::-ms-input-placeholder{
+    color: #fff;
+    font-weight: 300;
+}
+
 .form-control.search::placeholder{
     color: #fff;
     font-weight: 300;
@@ -34,6 +54,7 @@ button.gm-control-active.gm-fullscreen-control, button.gm-svpc, .gmnoprint{
 
 .form-control.search:focus{
     border: none;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     outline: none;
 }
