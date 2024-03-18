@@ -145,7 +145,6 @@ p{
 section.header--wrapper {
     -webkit-box-shadow: 0 1px 3px 0 rgba(83, 83, 83, 0.1), 0 1px 2px 0 rgba(77, 77, 77, 0.06);
             box-shadow: 0 1px 3px 0 rgba(83, 83, 83, 0.1), 0 1px 2px 0 rgba(77, 77, 77, 0.06);
-            overflow: hidden;
 }
 .main-header.sticky{
     position: fixed;
@@ -776,8 +775,8 @@ i.filtericon {
             align-items: center;
 }
 .map-overly {
-    background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #868686),color-stop(75%, #868686),to(rgba(60,60,60,0)));
     background-image: -o-linear-gradient(left,#868686 0,#868686 75%,rgba(60,60,60,0));
+    background-image: -webkit-gradient(linear,left top, right top,color-stop(0, #868686),color-stop(75%, #868686),to(rgba(60,60,60,0)));
     background-image: linear-gradient(90deg,#868686 0,#868686 75%,rgba(60,60,60,0));
     width: 100vw;
     position: absolute;
@@ -814,6 +813,9 @@ i.filtericon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+.download-center-content{
+    background-color: #f5f7f9;
 }
 @media screen and (max-width:1280px) {
     .action-menu-item-wrapper.mobile{
@@ -1066,9 +1068,8 @@ i.filtericon {
 }
 @media screen and (max-width:768px) {
     .slider-container ul {
-        -ms-flex-wrap: nowrap !important;
-            flex-wrap: nowrap !important;
-        overflow-x: scroll;
+        -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
     }
     .slick-next {
         right: 0;
@@ -1140,6 +1141,9 @@ i.filtericon {
     }
 }
 @media screen and (max-width:590px) {
+    .download-center-content{
+        background-color: transparent;
+    }
     h1, h2, h3, h4, h5, h6 {
         line-height: calc(100% + .5rem);
         line-height: 1.275;
